@@ -1,0 +1,115 @@
+:root {
+    --primary: #AB7442;
+    --light: #F5F5F5;
+    --dark: #353535;
+    --back: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+.page-model {
+    background: var(--back);
+    border-radius: 10px;
+    box-shadow: 0 0 50px 0 rgb(0 0 0 / 0.03);
+    -webkit-box-shadow: 0px 20px 23px 0px rgba(62, 73, 84, 0.04);
+    box-shadow: 0px 12px 23px 0px rgba(62, 73, 84, 0.04);
+}
+.middle {
+    margin-top: 60px;
+    height: 1000px;
+
+}
+
+.line {  
+    padding: 0 20px 0;  
+    margin: 20px 0;  
+    line-height: 1px;  
+    border-left: 190px solid #ddd;  
+    border-right: 190px solid #ddd;  
+    text-align: center;  
+}
+
+.line .line-in {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#bottoms {
+    color: #fff;
+    background-color: #2f2f2f;
+    padding: 50px 0;
+    width: 100%;
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+}
+
+
+
+/* 主页正背景图 */
+.page-pic {
+    padding-top: 200px !important;
+    padding-bottom: 100px !important;
+    background: linear-gradient(rgba(131, 131, 131, 0.7), rgba(53, 53, 53, .7)), url(../res/img/mainpage/main-page-background.png) center center no-repeat;
+    background-size: cover;
+}
+
+.web-title {
+    color: rgb(255, 255, 255);
+}
+
+
+/* 风景类型 */
+#portfolio-flters li {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--dark);
+    cursor: pointer;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.active {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.portfolio-item img {
+    transition: .5s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item .portfolio-overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 50%;
+    background: rgba(53, 53, 53, .7);
+    transition: .5s;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.portfolio-item .portfolio-overlay .btn {
+    opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-overlay .btn {
+    opacity: 1;
+}
